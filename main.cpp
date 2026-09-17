@@ -51,7 +51,7 @@ void drawCoordinates(int width, int height) {
 void getData(std::string file) {
 	std::filesystem::path path = file;
 	std::string line;
-	std::fstream read(path);
+	std::ifstream read(path);
 	int l = 0;
 
 	while (getline(read, line)) {
@@ -90,6 +90,7 @@ void getData(std::string file) {
 			x.push_back(std::stoi(tempX));
 			y.push_back(std::stoi(tempY));
 		}	
+		l++;	
 	}
 }
 
